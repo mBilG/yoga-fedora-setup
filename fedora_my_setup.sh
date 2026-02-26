@@ -22,18 +22,19 @@ read
 # Fractional scaling for gdm
 echo "2. Configuring fractional scaling on GDM"
 
-# Copy monitors.xml file to ~gdm/.config/
+# Copy monitors.xml file to /etc/xdg/
 echo "Copying monitors.xml file"
-sudo cp ~/.config/monitors.xml ~gdm/.config/monitors.xml
+sudo cp ~/.config/monitors.xml /etc/xdg/monitors.xml
 
+# NOT USED ANYMORE ON FEDORA!!
 # Copy monitors.xml file to /var/lib/gdm/.config/
-sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/
-
+#sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/
 # Enable fractional scaling for gdm user
-echo "3. Enable fractional scaling for GDM user"
-sudo -u gdm dbus-launch gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+#echo "3. Enable fractional scaling for GDM user"
+#sudo -u gdm dbus-launch gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+
 echo
-echo "Enabled!"
+echo "Copied!"
 echo "Press ENTER to continue"
 read 
 
